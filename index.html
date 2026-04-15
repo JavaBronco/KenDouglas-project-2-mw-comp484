@@ -38,6 +38,25 @@
           </button>
         </div>
       </section>
+
+      <section class="pet-form-container">
+        <h2>Update Pet Info</h2>
+        <form class="pet-form">
+          <div>
+            <label for="pet-name">Name:</label>
+            <input type="text" id="pet-name" name="name" placeholder="Enter pet name">
+          </div>
+          <div>
+            <label for="pet-weight">Weight (lbs):</label>
+            <input type="number" id="pet-weight" name="weight" min="0" placeholder="Enter weight">
+          </div>
+          <div>
+            <label for="pet-happiness">Happiness:</label>
+            <input type="number" id="pet-happiness" name="happiness" min="0" placeholder="Enter happiness">
+          </div>
+          <button type="submit" class="update-button">Update Pet</button>
+        </form>
+      </section>
     </main>
 
     <!-- Your web-app is https, so your scripts need to be too -->

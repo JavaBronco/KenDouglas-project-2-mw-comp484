@@ -11,6 +11,26 @@ $(document).ready(function() { // Makes sure that your function is called once a
     $('.play-button').click(clickedPlayButton);
     $('.exercise-button').click(clickedExerciseButton);
 
+    // Handle form submission to update pet info
+    $('.pet-form').submit(function(event) {
+        event.preventDefault();
+        console.log('Form data:', $(this).serialize());
+
+        var formData = $(this).serializeArray();
+        formData.forEach(function(field) {
+            if (field.name === 'name' && field.value !== '') {
+                pet_info['name'] = field.value;
+            } else if (field.name === 'weight' && field.value !== '') {
+                pet_info['weight'] = parseFloat(field.value);
+            } else if (field.name === 'happiness' && field.value !== '') {
+                pet_info['happiness'] = parseFloat(field.value);
+            }
+        });
+
+        checkAndUpdatePetInfoInHtml();
+        $(this)[0].reset();
+    });
+
 
     function clickedTreatButton() {
         // Increase pet happiness
