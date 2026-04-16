@@ -24,7 +24,7 @@
 
   main {
     display: block;
-    height: 175px;
+    min-height: 175px;
     padding: 20px 25px;
     background-color: #b0b8c1;
   }
@@ -150,5 +150,48 @@
   }
 
   .update-button:hover {
+    background-color: #003f73;
+  }
+
+  .action-log-container {
+    clear: both;
+    padding: 20px 25px;
+    background-color: #c8d4e0;
+    border-top: 2px solid #8aaac8;
+  }
+
+  .action-log-container h2 {
+    color: #005A9C;
+    margin-top: 0;
+  }
+
+  .action-log-list {
+    max-height: 180px;
+    overflow-y: auto;
+    background-color: #eef2f6;
+    border: 1px solid #8aaac8;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-bottom: 12px;
+    font-family: monospace;
+    font-size: 13px;
+  }
+
+  .action-log-list li {
+    margin-bottom: 4px;
+  }
+
+  .download-log-button {
+    padding: 7px 20px;
+    background-color: #005A9C;
+    color: #ffffff;
+    border: 1px solid #003f73;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .download-log-button:hover {
     background-color: #003f73;
   }
